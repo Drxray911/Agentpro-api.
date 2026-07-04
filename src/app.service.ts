@@ -2,7 +2,11 @@ import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    return 'Hello World!';
-  }
+  @Get()
+getStatus() {
+  return {
+    name: 'Agent Pro API',
+    status: 'running',
+    version: '1.0.0',
+  };
 }
